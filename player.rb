@@ -8,11 +8,4 @@ class Player
     @life = 3
   end
 
-  def lose? 
-    @life = 0
-  end 
-
 end
-
-# p = Player.new("Stefani")
-# puts p.life
