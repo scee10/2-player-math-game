@@ -26,19 +26,22 @@ while game.players[0].life > 0 and game.players[1].life > 0 do
   input = gets.chomp.to_i
 
   # remove life if answer is wrong 
-  if (input != answer)
-    game.remove_life
+  if (input != answer && game.current_player.life != 0)
     puts "Computer says: That is totally wrong ❌"
+    game.remove_life
   else
     puts "Computer says: You totally got it dude! ✅"
   end
 
   # show score 
+  if (game.current_player.life != 0)
   game.show_life
+  end
 
   # change turn
   game.change_player
 end
+
 
 # ask question 
 # input logic 
